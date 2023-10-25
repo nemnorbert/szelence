@@ -1,0 +1,70 @@
+// SASS VARIABLES
+$pcWidth: 800px;
+$minWidth: 280px;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    --color_main: darkcyan;
+    --color_secundary: rgb(0, 99, 99);
+
+    min-width: $minWidth;
+}
+body {
+    background-color: var(--color_main);
+}
+a {
+    text-decoration: none;
+    color: var(--color_secundary);
+}
+
+// NAVIGATION
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: var(--color_main);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    height: 50px;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+}
+nav > a {
+    grid-column: span 3;
+}
+
+// MAIN
+main {
+    #home {
+        background-color: red;
+    }
+}
+main > div {
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--color_secundary);
+    min-height: 200px;
+}
+footer > div {
+    grid-column: span 12;
+}
+
+@media only screen and (min-width: $pcWidth) {
+    nav {
+        display: none;
+    }
+    footer > div {
+        grid-column: span 3;
+    }
+  }
