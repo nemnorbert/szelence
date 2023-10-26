@@ -1,3 +1,14 @@
 {
-    "name": "Szelence Üvegékszerbolt és Műhely"
+    "name": "Szelence Üvegékszerbolt és Műhely",
+    "contact": [
+        {"name": "phone", "prelink": "tel:"},
+        {"name": "mail", "prelink": "mailto:"}
+    ],
+    "navigation": [
+        {"link": "home", "name": "Főoldal", "mobile": true, "header": true},
+        {"link": "gallery", "name": "Képek", "mobile": true, "header": true},
+        {"link": "about", "name": "Rólam", "mobile": true, "header": true},
+        {"link": "faq", "name": "Kérdések", "mobile": false, "header": true},
+        {"link": "contact", "name": "Kapcsolat", "mobile": true, "header": true}
+    ]
 }

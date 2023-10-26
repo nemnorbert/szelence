@@ -5,9 +5,10 @@
 }
 
 html {
-  --color_main: darkcyan;
-  --color_secundary: rgb(0, 99, 99);
+  scroll-behavior: smooth;
   min-width: 280px;
+  --color_main: hsl(180, 72%, 45%);
+  --color_secundary: hsl(180, 72%, 30%);
 }
 
 body {
@@ -17,6 +18,22 @@ body {
 a {
   text-decoration: none;
   color: var(--color_secundary);
+}
+
+main, footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: aliceblue;
+  height: 50px;
+  max-width: 1000px;
 }
 
 nav {
@@ -40,6 +57,9 @@ nav > a {
 main #home {
   background-color: red;
 }
+main #contact {
+  background: linear-gradient(to bottom, var(--color_main), var(--color_secundary));
+}
 
 main > div {
   min-height: 80vh;
@@ -49,8 +69,10 @@ main > div {
 footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: var(--color_secundary);
+  background: linear-gradient(0deg, #1b1b1b, #2c2c2c);
+  color: white;
   min-height: 200px;
+  padding-bottom: 200px;
 }
 
 footer > div {

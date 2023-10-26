@@ -1,6 +1,7 @@
 // SASS VARIABLES
 $pcWidth: 800px;
 $minWidth: 280px;
+$maxWidth: 1000px;
 
 * {
     box-sizing: border-box;
@@ -8,10 +9,11 @@ $minWidth: 280px;
     margin: 0;
 }
 html {
-    --color_main: darkcyan;
-    --color_secundary: rgb(0, 99, 99);
-
+    scroll-behavior: smooth;
     min-width: $minWidth;
+
+    --color_main: hsl(180, 72%, 45%);
+    --color_secundary: hsl(180, 72%, 30%);
 }
 body {
     background-color: var(--color_main);
@@ -21,7 +23,22 @@ a {
     color: var(--color_secundary);
 }
 
+main, footer {
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
 // NAVIGATION
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: aliceblue;
+    height: 50px;
+    max-width: $maxWidth;
+}
 nav {
     position: fixed;
     bottom: 0;
@@ -44,6 +61,9 @@ main {
     #home {
         background-color: red;
     }
+    #contact {
+        background: linear-gradient(to bottom, var(--color_main), var(--color_secundary));
+    }
 }
 main > div {
     min-height: 80vh;
@@ -53,8 +73,10 @@ main > div {
 footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: var(--color_secundary);
+    background: linear-gradient(0deg, #1b1b1b, #2c2c2c);
+    color: white;
     min-height: 200px;
+    padding-bottom: 200px;
 }
 footer > div {
     grid-column: span 12;
